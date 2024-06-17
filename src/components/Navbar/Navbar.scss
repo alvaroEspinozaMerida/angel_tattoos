@@ -1,0 +1,10 @@
+@import 'src/assets/styles/mixins.scss';  // Make sure the path to mixins is correct
+@import 'src/assets/styles/variables.scss';
+
+.nav-link {
+  @include nav-link;
+}
+
+.nav-link-mobile {
+  @include nav-link-mobile;
+}

@@ -1,0 +1,8 @@
+@mixin nav-link {
+  @apply text-gray-300 hover:bg-dark-secondary hover:text-primary-text-dark px-3 py-2 rounded-md text-sm font-medium;
+}
+
+@mixin nav-link-mobile {
+  @apply block px-3 py-2 rounded-md text-base font-medium text-primary-text-dark bg-dark-secondary ;
+}
+

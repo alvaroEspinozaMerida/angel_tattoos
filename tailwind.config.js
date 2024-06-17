@@ -1,0 +1,24 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        'dark-primary': '#121212',
+        'dark-secondary': '#1E1E1E',
+
+        'light-primary': '#F0F0F0',
+        'light-secondary': '#E0E0E0',
+
+        'primary-text-dark': '#E0E0E0',
+        'secondary-text-dark': '#A0A0A0',
+
+        'primary-text-light': '#212121',
+        'secondary-text-light': '#757575',
+        'accent': '#42A5F5',
+      }
+    },
+  },
+  plugins: [],
+}
+
