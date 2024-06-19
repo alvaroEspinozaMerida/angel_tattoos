@@ -16,7 +16,13 @@ export default {
         'primary-text-light': '#212121',
         'secondary-text-light': '#757575',
         'accent': '#42A5F5',
-      }
+      },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
+
+
+
     },
   },
   plugins: [],

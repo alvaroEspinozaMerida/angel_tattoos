@@ -1,0 +1,13 @@
+@import 'src/assets/styles/mixins.scss';  // Make sure the path to mixins is correct
+@import 'src/assets/styles/variables.scss';
+
+.button_1{
+  @include button_1;
+}
+.paragraph{
+  @include paragraph1;
+}
+
+.paragraph2{
+  @include paragraph2;
+}

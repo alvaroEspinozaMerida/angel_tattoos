@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { MenuOutlined } from '@ant-design/icons';
 import './Navbar.scss';  // Import your specific SCSS file
 
 const Navbar = () => {
@@ -11,13 +11,13 @@ const Navbar = () => {
     return (
         <nav className="bg-dark-primary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
-                    <div className="flex">
-                        <div className="flex-shrink-0 flex items-center">
-                            <a href="#" className="text-white px-3 py-2 rounded-md text-sm font-medium">Brand</a>
+                <div className="flex justify-between h-20">
+                    <div className="flex items-center gap-x-5">
+                        <div className="flex-shrink-0">
+                            <a href="#" className="text-white py-2 rounded-md text-lg font-medium">Martin's Detail (858)-499-9652</a>
                         </div>
                         <div className="hidden md:block">
-                            <div className="ml-10 flex items-baseline space-x-4">
+                            <div className="ml-10 flex items-center space-x-4">
                                 <a href="#" className="nav-link">Home</a>
                                 <a href="#" className="nav-link">Services</a>
                                 <a href="#" className="nav-link">About</a>
@@ -29,9 +29,9 @@ const Navbar = () => {
                     <div className="flex items-center md:hidden">
                         <button onClick={() => setIsOpen(!isOpen)} className="nav-link inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
                             {/* Icon for menu button */}
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
+                            <div className="h-6 w-6 text-light-primary " >
+                                <MenuOutlined />
+                            </div>
                         </button>
                     </div>
 
