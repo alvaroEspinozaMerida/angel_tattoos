@@ -11,3 +11,10 @@
 .paragraph2{
   @include paragraph2;
 }
+
+.bullet-point::before {
+  content: '• '; /* Unicode character for bullet point */
+  color: $accent;  /* Bullet point color */
+  //display: inline-block;
+  width: 3em;
+}

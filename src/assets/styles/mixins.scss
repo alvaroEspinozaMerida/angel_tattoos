@@ -8,7 +8,7 @@
 
 
 @mixin button_1{
-  @apply  text-2xl text-primary-text-dark outline px-6 py-3 bg-dark-primary rounded-md hover:bg-dark-secondary transition duration-300
+  @apply  h-20 text-2xl text-primary-text-dark outline px-6 py-3 bg-dark-primary rounded-md hover:bg-dark-secondary transition duration-300
 }
 
 @mixin paragraph1 {

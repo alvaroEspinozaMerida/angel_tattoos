@@ -2,15 +2,25 @@ import stockVideo from "/src/assets/videos/vecteezy_car-passing-through-highway-
 import "./Home.scss"
 import stockImage from "/src/assets/car-service.png"
 
+import background_1 from "/src/assets/wet_car.jpg"
+import background_2 from "/src/assets/wet_car_2.jpg"
+
+
+
+
+
 import ImageGrid from "../ImageGrid/index.jsx";
+import React from "react";
+import MapComponent from "../MapComponent/index.jsx";
+import Footer from "../Footer/index.jsx";
 const Home = () => {
     const images = [
-        { src: "/src/assets/car_service2.jpg", link: '/page1' },
-        { src: "/src/assets/car_service2.jpg", link: '/page2' },
-        { src: "/src/assets/car_service2.jpg", link: '/page3' },
-        { src: "/src/assets/car_service2.jpg", link: '/page4' },
-        { src: "/src/assets/car_service2.jpg", link: '/page5' },
-        { src: "/src/assets/car_service2.jpg", link: '/page6' },
+        { src: "/src/assets/car_service2.jpg", link: '/page1', details: "Ceramic Coating" },
+        { src: "/src/assets/car_service2.jpg", link: '/page2', details: "Clear Bra" },
+        { src: "/src/assets/car_service2.jpg", link: '/page3', details: "Auto Detailing" },
+        { src: "/src/assets/car_service2.jpg", link: '/page4', details: "Paint Correction" },
+        { src: "/src/assets/car_service2.jpg", link: '/page5', details: "Dealership Services" },
+        { src: "/src/assets/car_service2.jpg", link: '/page6', details: "Window Tinting" },
     ];
 
 
@@ -34,53 +44,101 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="min-h-screen bg-dark-secondary flex justify-center items-center px-12">
-                <div className = "flex flex-col gap-7 ">
-                    <div className = "flex justify-center items-center flex-row">
-                        <h2 className = "basis-1/2 text-center paragraph2 ">
-                            Exceptional Quality<br />
-                            Competitive Rates<br />
-                            Comprehensive Services<br />
-                            Reliability and Trust<br />
-                            Customer Satisfaction<br />
-                        </h2>
-                        <p className="p-20 basis-1/2 text-center paragraph">
-                            At Premier Auto Detailing, we pride ourselves on being one of the best detailers in the area. Our reputation for excellence is built on years of providing top-tier services to dealerships and individual clients alike. We understand the unique needs of dealerships, and our specialized services are tailored to meet and exceed your expectations.
-                        </p>
-                    </div>
+            <div className="relative overflow-hidden">
+                <section className="min-h-screen bg-dark-secondary flex justify-center items-center px-12">
+                        <div className = "flex flex-col gap-7 ">
+                            <div className = "flex justify-center items-center flex-row">
+                                <h2 className = "basis-1/2 text-center paragraph2 ">
+                                    Exceptional Quality<br />
+                                    Competitive Rates<br />
+                                    Comprehensive Services<br />
+                                    Reliability and Trust<br />
+                                    Customer Satisfaction<br />
+                                </h2>
+                                <p className="p-20 basis-1/2 text-center paragraph">
+                                    At Premier Auto Detailing, we pride ourselves on being one of the best detailers in the area. Our reputation for excellence is built on years of providing top-tier services to dealerships and individual clients alike. We understand the unique needs of dealerships, and our specialized services are tailored to meet and exceed your expectations.
+                                </p>
+                            </div>
 
-                    <div className = "flex justify-center items-center flex-row" >
-                        <p className="p-20 basis-1/2 text-center paragraph">
-                            At Premier Auto Detailing, we pride ourselves on being one of the best detailers in the area. Our reputation for excellence is built on years of providing top-tier services to dealerships and individual clients alike. We understand the unique needs of dealerships, and our specialized services are tailored to meet and exceed your expectations.
-                        </p>
-                        <div className="p-20 basis-1/2  flex justify-center items-center">
-                            <img src = {stockImage}></img>
+                            <div className = "flex justify-center items-center flex-row" >
+                                <p className="p-20 basis-1/2 text-center paragraph">
+                                    At Premier Auto Detailing, we pride ourselves on being one of the best detailers in the area. Our reputation for excellence is built on years of providing top-tier services to dealerships and individual clients alike. We understand the unique needs of dealerships, and our specialized services are tailored to meet and exceed your expectations.
+                                </p>
+                                <div className="p-20 basis-1/2  flex justify-center items-center">
+                                    <img src = {stockImage}></img>
+                                </div>
+
+                            </div>
                         </div>
+                    </section>
+                <section className=" bg-green-500 flex justify-center items-center">
+                    <ImageGrid images={images}/>
+                </section>
 
+                <div className="h-72 w-full bg-no-repeat bg-cover bg-fixed bg-wet-car "></div>
+
+
+                <section className="h-64 bg-dark-primary border-accent border-y-2 flex justify-center items-center">
+                    <div className="flex flex-row justify-center items-center gap-16">
+                        <h2 className = "text-7xl text-primary-text-dark " >Logo Here</h2>
+                        <button className="button_1">
+                            Get Free Quote
+                        </button>
+                        <h3 className = "text-1xl text-primary-text-dark " >Quality is one call away</h3>
                     </div>
-                </div>
-            </section>
+                </section>
+
+                <section className="min-h-screen p-12 bg-dark-secondary bg-flex justify-center items-center">
+                    <div className="z-10 flex flex-col gap-7 items-center justify-center">
+
+                        <div className=" flex flex-row gap-7 ">
+                            <img src={background_2} alt={`Image2`} className="w-1/2 h-auto " />
+                            <div className=" flex flex-col gap-7 items-center justify-center">
+                                <h2>Why choose us</h2>
+                                <button className="button_1">
+                                    Unmatched Quality Service
+                                </button>
+                                <button className="button_1">
+                                    Testimonials
+                                </button>
+                                <button className="button_1">
+                                    Ultimate Quality Paint Protection
+                                </button>
+
+                            </div>
+                        </div>
+                        <div className=" flex flex-col gap-7 items-center justify-center">
+                            <h2>WHY IS PAINT PROTECTION IMPORTANT?</h2>
+                            <div className=" flex flex-row gap-7 items-center justify-center paragraph">
+                                <h3>
+                                    At Excellence Auto Detail, our passion for cars matches yours, and we are committed to preserving the pristine appearance and value of your vehicle. The constant road work in Chula Vista makes us all more susceptible to the need for car detailing. Regular maintenance is essential, but it’s equally important to protect your car’s exterior. As the industry leader in paint protection technology, our advanced nano-ceramic coatings are designed to keep your vehicle’s paint in immaculate condition. These coatings form an invisible shield, guarding your paint against scratches, rock chips, dirt, and debris. Not only do they provide unparalleled protection, but they also feature a self-cleaning effect, simplifying maintenance and washing. Invest in your vehicle now to enhance its resale value in the future. Choosing Excellence Auto Detail means opting for the premier auto detailing experience in San Diego.
+                                </h3>
+
+                                <h3>
+                                    At Excellence Auto Detail, our passion for cars matches yours, and we are committed to preserving the pristine appearance and value of your vehicle. The constant road work in Chula Vista makes us all more susceptible to the need for car detailing. Regular maintenance is essential, but it’s equally important to protect your car’s exterior. As the industry leader in paint protection technology, our advanced nano-ceramic coatings are designed to keep your vehicle’s paint in immaculate condition. These coatings form an invisible shield, guarding your paint against scratches, rock chips, dirt, and debris. Not only do they provide unparalleled protection, but they also feature a self-cleaning effect, simplifying maintenance and washing. Invest in your vehicle now to enhance its resale value in the future. Choosing Excellence Auto Detail means opting for the premier auto detailing experience in San Diego.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div className="h-72 w-full bg-no-repeat bg-cover bg-fixed bg-wet-car2"></div>
 
 
-            <section className=" bg-green-500 flex justify-center items-center">
-                <ImageGrid images={images}/>
-            </section>
+                <section className="min-h-screen bg-dark-secondary flex justify-center items-center gap-16">
+                    <div className="z-10 flex flex-col gap-7 ">
+                        <h2 className = "text-5xl text-primary-text-dark  border-b-4 border-accent" >Our Locations</h2>
+                        <h1 className = "text-3xl text-primary-text-dark bullet-point" >Carlsbad</h1>
+                        <h1 className = "text-xl text-secondary-text-dark " >2630 Flower Fields Way <br/>Carlsbad, CA 92010</h1>
+                    </div>
+                    <MapComponent />
+                </section>
 
+            </div>
 
-
-            <section className="min-h-screen bg-yellow-500 flex justify-center items-center">
-                <h2 className="text-white text-3xl">Gallery in Section 4</h2>
+            <section className="h-64 bg-dark-primary flex justify-center p-10">
+               <Footer/>
             </section>
-            <section className="min-h-screen bg-purple-500 flex justify-center items-center">
-                <h2 className="text-white text-3xl">Services in Section 5</h2>
-            </section>
-            <section className="min-h-screen bg-orange-500 flex justify-center items-center">
-                <h2 className="text-white text-3xl">Contact in Section 6</h2>
-            </section>
-            <section className="min-h-screen bg-pink-500 flex justify-center items-center">
-                <h2 className="text-white text-3xl">About in Section 7</h2>
-            </section>
-
 
         </>
     )

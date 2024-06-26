@@ -20,6 +20,10 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
+      backgroundImage: {
+        'wet-car': "url('/src/assets/car3.jpg')",
+        'wet-car2': "url(/src/assets/wet_car_2.jpg)"
+      }
 
 
 
