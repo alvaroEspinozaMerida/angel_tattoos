@@ -8,15 +8,15 @@
 
 
 @mixin button_1{
-  @apply  h-20 text-2xl text-primary-text-dark outline px-6 py-3 bg-dark-primary rounded-md hover:bg-dark-secondary transition duration-300
+  @apply  px-3 h-10 lg:px-6 lg:py-3 lg:text-2xl lg:h-20 text-xl text-primary-text-dark outline bg-dark-primary rounded-md hover:bg-dark-secondary transition duration-300
 }
 
 @mixin paragraph1 {
-  @apply text-xl text-primary-text-dark
+  @apply text-base text-primary-text-dark
 }
 
 @mixin paragraph2 {
-  @apply text-6xl text-primary-text-dark
+  @apply text-3xl lg:text-6xl text-primary-text-dark
 }
 
 @mixin contact_input{

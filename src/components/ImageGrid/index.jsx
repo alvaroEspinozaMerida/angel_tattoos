@@ -3,7 +3,7 @@ import React from 'react';
 import "./ImageGrid.scss"
 const ImageGrid = ({ images }) => {
     return (
-        <div className="grid grid-cols-3 grid-rows-2">
+        <div className="pe-8 lg:p-0 grid grid-cols-2 grid-rows-2 lg:grid-cols-3">
             {images.map((image, index) => (
                 <div key={index} className="relative">
                     <img src={image.src} alt={`Image ${index + 1}`} className="w-full h-auto" />
