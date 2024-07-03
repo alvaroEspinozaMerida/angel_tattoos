@@ -1,0 +1,9 @@
+@import 'src/assets/styles/mixins.scss';  // Make sure the path to mixins is correct
+
+.contact_input{
+  @include contact_input
+}
+
+.contact_input2{
+  @include contact_input2
+}

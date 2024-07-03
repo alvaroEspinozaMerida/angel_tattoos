@@ -5,10 +5,6 @@ import stockImage from "/src/assets/car-service.png"
 import background_1 from "/src/assets/wet_car.jpg"
 import background_2 from "/src/assets/wet_car_2.jpg"
 
-
-
-
-
 import ImageGrid from "../ImageGrid/index.jsx";
 import React from "react";
 import MapComponent from "../MapComponent/index.jsx";
@@ -30,14 +26,14 @@ const Home = () => {
                 <video src = {stockVideo} autoPlay loop muted className="absolute z-0 w-full h-full object-cover"/>
 
                 <div className="z-10 flex flex-col gap-7 items-center justify-center">
-                    <h2 className = "text-7xl text-primary-text-dark " >Top Quality Auto Detail</h2>
-                    <h1 className = "text-5xl text-primary-text-dark " >Best in San Diego</h1>
-                    <h3 className = "text-1xl text-primary-text-dark " >Perfection is one call away</h3>
+                    <h1 className = "text-3xl lg:text-7xl text-primary-text-dark " >Top Quality Auto Detail</h1>
+                    <h1 className = "text-2xl lg:text-5xl text-primary-text-dark " >Best in San Diego</h1>
+                    <h1 className = "text-1xl lg:text-2xl text-primary-text-dark " >Perfection is one call away</h1>
                     <div className="z-10 flex flex-row gap-7 items-center justify-center" >
                         <button className="button_1">
                             Services
                         </button>
-                        <button className="button_1">
+                        <button className="button_1" >
                             Talk to Rep
                         </button>
                     </div>
@@ -45,8 +41,7 @@ const Home = () => {
             </section>
 
             <div className="relative overflow-hidden">
-                <section className="min-h-screen bg-dark-secondary flex justify-center items-center px-12">
-                        <div className = "flex flex-col gap-7 ">
+                <section className="flex flex-col min-h-screen bg-dark-secondary flex justify-center items-center px-12 gap-7 ">
                             <div className = "flex justify-center items-center flex-row">
                                 <h2 className = "basis-1/2 text-center paragraph2 ">
                                     Exceptional Quality<br />
@@ -69,7 +64,6 @@ const Home = () => {
                                 </div>
 
                             </div>
-                        </div>
                     </section>
                 <section className=" bg-green-500 flex justify-center items-center">
                     <ImageGrid images={images}/>

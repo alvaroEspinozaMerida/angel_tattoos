@@ -19,4 +19,10 @@
   @apply text-6xl text-primary-text-dark
 }
 
+@mixin contact_input{
+  @apply text-primary-text-dark bg-dark-secondary border-2 border-light-secondary
+}
+@mixin contact_input2{
+  @apply text-primary-text-dark bg-dark-secondary border-2 border-light-secondary h-72
+}
 
