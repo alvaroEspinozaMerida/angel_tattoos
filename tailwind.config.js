@@ -15,14 +15,22 @@ export default {
 
         'primary-text-light': '#212121',
         'secondary-text-light': '#757575',
-        'accent': '#42A5F5',
+        'accent': '#f54242',
+      },
+      backgroundPosition: {
+        'top-20': 'center top 20%',
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Baskervville SC', 'serif'],
       },
       backgroundImage: {
-        'wet-car': "url('/src/assets/car3.jpg')",
-        'wet-car2': "url(/src/assets/wet_car_2.jpg)"
+        'bg_1': "url('/src/assets/senpaiiiart_1.jpg')",
+        'bg_2': "url(/src/assets/senpaiiiart_2.jpg)",
+        'bg_3': "url('/src/assets/senpaiiiart_3.jpg')",
+        'bg_4': "url(/src/assets/senpaiiiart_4.jpg)",
+        'bg_5': "url(/src/assets/senpaiiiart_5.jpg)",
+        'bg_6': "url(/src/assets/senpaiiiart_6.jpg)",
+        'bg_7': "url(/src/assets/senpaiiiart_7.jpg)",
       }
 
 

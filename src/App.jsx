@@ -10,12 +10,16 @@ import {ToastContainer} from 'react-toastify';
 function App() {
   return (
     <>
-      <Navbar/>
-        <Routes>
-            <Route path = "/" element={<Home/>}/>
+        <div className="w-full overflow-hidden">
+            <Navbar/>
+            <Routes>
+                <Route path = "/" element={<Home/>}/>
 
-            <Route path = "/contact" element = {<ContactPage/>} />
-        </Routes>
+                <Route path = "/contact" element = {<ContactPage/>} />
+            </Routes>
+
+        </div>
+
 
     </>
   )

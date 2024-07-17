@@ -1,5 +1,6 @@
+@import 'src/assets/styles/variables.scss';
 @mixin nav-link {
-  @apply text-primary-text-dark hover:bg-dark-secondary hover:text-primary-text-dark px-10 py-2 rounded-md text-lg font-medium;
+  @apply text-primary-text-dark hover:bg-dark-secondary hover:text-primary-text-dark px-10 py-2 rounded-md text-xl font-bold;
 }
 
 @mixin nav-link-mobile {
@@ -8,15 +9,15 @@
 
 
 @mixin button_1{
-  @apply  px-3 h-10 lg:px-6 lg:py-3 lg:text-2xl lg:h-20 text-xl text-primary-text-dark outline bg-dark-primary rounded-md hover:bg-dark-secondary transition duration-300
+  @apply  px-3 h-14 lg:px-6 lg:py-3 lg:text-2xl lg:h-20 text-xl text-primary-text-dark outline bg-dark-primary rounded-md hover:bg-dark-secondary transition duration-300
 }
 
 @mixin paragraph1 {
-  @apply text-base text-primary-text-dark
+  @apply text-base text-xl lg:text-3xl text-primary-text-dark
 }
 
 @mixin paragraph2 {
-  @apply text-3xl lg:text-6xl text-primary-text-dark
+  @apply text-2xl lg:text-6xl text-primary-text-dark
 }
 
 @mixin contact_input{
@@ -26,3 +27,94 @@
   @apply text-primary-text-dark bg-dark-secondary border-2 border-light-secondary h-72
 }
 
+@mixin neon-border($color) {
+  border-bottom: 2px solid $color;
+  box-shadow:
+          0 0 5px $color,
+          0 0 10px $color,
+          0 0 20px $color,
+          0 0 40px $color,
+          0 0 80px $color;
+  filter: brightness(1.5); // Adjust the brightness
+
+}
+
+.neon-border {
+  @include neon-border($accent);
+}
+
+
+@keyframes neon-glow {
+  0%, 100% {
+    box-shadow:
+            0 0 5px $accent,
+            0 0 10px $accent,
+            0 0 20px $accent,
+            0 0 40px $accent,
+            0 0 80px $accent,
+            0 0 90px $accent;
+  }
+  50% {
+    box-shadow:
+            0 0 10px $accent,
+            0 0 20px $accent,
+            0 0 30px $accent,
+            0 0 50px $accent,
+            0 0 100px $accent,
+            0 0 110px $accent;
+  }
+}
+@mixin neon-border($color, $position: both) {
+  position: relative;
+
+  @if $position == top or $position == both {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px; // Adjust position to be at the top
+      left: 0;
+      width: 100%;
+      height: 2px; // Height of the border
+      background-color: $color;
+      box-shadow:
+              0 0 5px $color,
+              0 0 10px $color,
+              0 0 20px $color,
+              0 0 40px $color,
+              0 0 80px $color;
+      animation: neon-glow 1.5s infinite alternate;
+    }
+  }
+
+  @if $position == bottom or $position == both {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px; // Adjust position to be at the bottom
+      left: 0;
+      width: 100%;
+      height: 2px; // Height of the border
+      background-color: $color;
+      box-shadow:
+              0 0 5px $color,
+              0 0 10px $color,
+              0 0 20px $color,
+              0 0 40px $color,
+              0 0 80px $color;
+      animation: neon-glow 1.5s infinite alternate;
+    }
+  }
+}
+
+
+.neon-border-bottom {
+  @include neon-border($accent, bottom);
+}
+
+.neon-border-top {
+  @include neon-border($accent, top);
+}
+
+.neon-border-top-bottom {
+  @include neon-border($accent, both);
+}

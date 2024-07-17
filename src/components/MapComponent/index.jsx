@@ -61,7 +61,7 @@ function MapComponent() {
                     center={center}
                     zoom={16}
                     onClick={() => setActiveMarker(null)}
-                    mapContainerStyle={{ width: "40%", height: "65vh" }}
+                    mapContainerStyle={{ width: "100%", height: "65vh" }}
                 >
                     {markers.map(({ id, name, position }) => (
                         <MarkerF

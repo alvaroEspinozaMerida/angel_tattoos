@@ -4,7 +4,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className="flex flex-row gap-12 items-start">
+            <div className="flex flex-row gap-6 lg:gap-12 items-start">
                 <div className="z-10 flex flex-col gap-4" >
                     <h1 className="text-primary-text-dark text-xl">Explore</h1>
                     <h2 className="text-secondary-text-dark text-l">Tattoos</h2>

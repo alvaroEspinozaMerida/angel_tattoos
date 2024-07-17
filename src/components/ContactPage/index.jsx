@@ -120,7 +120,7 @@ function ContactPage() {
                             />
                         </div>
 
-                        <div className="flex flex-row gap-10">
+                        <div className="flex flex-col lg:flex-row gap-10">
 
                             <div className="flex flex-col">
                                 <label htmlFor="email">

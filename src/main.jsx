@@ -9,13 +9,9 @@ import { ThemeProvider } from '/src/components/ThemeContext';  // Import the The
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-
       <ThemeProvider>
           <Router>
-              <App />
+              <App/>
           </Router>
       </ThemeProvider>
-
-  </React.StrictMode>,
 )
