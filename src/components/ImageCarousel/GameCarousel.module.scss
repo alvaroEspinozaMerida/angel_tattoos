@@ -1,0 +1,17 @@
+
+
+.carousel_container__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%; /* Space between items */
+
+  img{
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.05); /* White with 5% opacity */
+
+  }
+
+}

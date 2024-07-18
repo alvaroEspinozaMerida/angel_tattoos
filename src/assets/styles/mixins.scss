@@ -27,6 +27,9 @@
   @apply text-primary-text-dark bg-dark-secondary border-2 border-light-secondary h-72
 }
 
+@mixin image_column{
+  @apply
+}
 @mixin neon-border($color) {
   border-bottom: 2px solid $color;
   box-shadow:

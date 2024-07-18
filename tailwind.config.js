@@ -27,9 +27,9 @@ export default {
         'bg_1': "url('/src/assets/senpaiiiart_1.jpg')",
         'bg_2': "url(/src/assets/senpaiiiart_2.jpg)",
         'bg_3': "url('/src/assets/senpaiiiart_3.jpg')",
-        'bg_4': "url(/src/assets/senpaiiiart_4.jpg)",
+        'bg_4': "url(/src/assets/senpaiiiart_100.jpg)",
         'bg_5': "url(/src/assets/senpaiiiart_5.jpg)",
-        'bg_6': "url(/src/assets/senpaiiiart_6.jpg)",
+        'bg_6': "url(/src/assets/senpaiiiart_200.jpg)",
         'bg_7': "url(/src/assets/senpaiiiart_7.jpg)",
       }
 
