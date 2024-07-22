@@ -24,13 +24,9 @@ export default {
         sans: ['Baskervville SC', 'serif'],
       },
       backgroundImage: {
-        'bg_1': "url('/src/assets/senpaiiiart_1.jpg')",
-        'bg_2': "url(/src/assets/senpaiiiart_2.jpg)",
-        'bg_3': "url('/src/assets/senpaiiiart_3.jpg')",
-        'bg_4': "url(/src/assets/senpaiiiart_100.jpg)",
-        'bg_5': "url(/src/assets/senpaiiiart_5.jpg)",
-        'bg_6': "url(/src/assets/senpaiiiart_200.jpg)",
-        'bg_7': "url(/src/assets/senpaiiiart_7.jpg)",
+        'bg_1': "url('https://senpaiiart-photos.s3.us-west-1.amazonaws.com/background/senpaiiiart_100.jpg')",
+        'bg_2': "url('https://senpaiiart-photos.s3.us-west-1.amazonaws.com/background/senpaiiiart_300.jpg')",
+        'bg_3': "url('https://senpaiiart-photos.s3.us-west-1.amazonaws.com/background/senpaiiiart_200.jpg')",
       }
 
 

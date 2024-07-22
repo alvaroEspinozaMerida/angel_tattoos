@@ -14,14 +14,14 @@ const Navbar = () => {
                 <div className="flex justify-between h-20">
                     <div className="flex items-center gap-x-5">
                         <div className="flex-shrink-0">
-                            <a href="#" className="text-lg text-white py-2 rounded-md font-medium">senpaiiiart (858)-499-9652</a>
+                            <a href="/" className="text-lg text-white py-2 rounded-md font-medium">senpaiiiart (858)-499-9652</a>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-center space-x-4">
-                                <a href="#" className="nav-link">HOME</a>
-                                <a href="#" className="nav-link">PORTFOLIO</a>
+                                <a href="/" className="nav-link">HOME</a>
+                                <a href="/portfolio" className="nav-link">PORTFOLIO</a>
                                 <a href="#" className="nav-link">ABOUT ME</a>
-                                <a href="#" className="nav-link">CONTACT</a>
+                                <a href="/contact" className="nav-link">CONTACT</a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
             {/* Mobile menu, show/hide based on menu state. */}
             <div className={isOpen ? "md:hidden" : "hidden"}>
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="/" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Home</a>
                     <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Services</a>
                     <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">About</a>
                     <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Contact</a>

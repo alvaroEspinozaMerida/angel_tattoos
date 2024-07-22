@@ -6,6 +6,8 @@ import testImg from "../../assets/senpaiiiart_1.jpg";
 import testImg3 from "../../assets/senpaiiiart_1.jpg";
 import React from "react";
 
+
+
 function GameCarousel(props) {
 
     const image_names = [
@@ -20,27 +22,47 @@ function GameCarousel(props) {
         "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_9.jpg"
     ];
 
+    const column1 = image_names.slice(0, 3);
+    const column2 = image_names.slice(3, 6);
+    const column3 = image_names.slice(6, 9);
+
+
+
+
+
+
     return (
-        <div className = "flex justify-center w-full items-center flex-col lg:flex-row gap-5 p-10 pt-0 ">
-
-            <div className = "flex flex-col gap-8 ">
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[0]} alt="Image 2" />
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[1]} alt="Image 2" />
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[2]} alt="Image 2" />
-
+        <div className="flex justify-center w-full items-center flex-col lg:flex-row gap-5 p-10 pt-0">
+            <div className="flex flex-col gap-8">
+                {column1.map((image, index) => (
+                    <img
+                        key={index}
+                        className="h-[32rem] w-[28rem] shadow-2xl"
+                        src={image}
+                        alt={`Image ${index + 1}`}
+                    />
+                ))}
             </div>
-            <div className = "flex flex-col gap-8 pt-20 ">
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[3]} alt="Image 2" />
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[4]} alt="Image 2" />
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[5]} alt="Image 2" />
-
+            <div className="flex flex-col gap-8 pt-20">
+                {column2.map((image, index) => (
+                    <img
+                        key={index}
+                        className="h-[32rem] w-[28rem] shadow-2xl"
+                        src={image}
+                        alt={`Image ${index + 4}`}
+                    />
+                ))}
             </div>
-            <div className = "flex flex-col gap-8 ">
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[6]} alt="Image 2" />
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[7]} alt="Image 2" />
-                <img className="h-[32rem] w-[28rem] shadow-2xl " src={image_names[8]} alt="Image 2" />
+            <div className="flex flex-col gap-8">
+                {column3.map((image, index) => (
+                    <img
+                        key={index}
+                        className="h-[32rem] w-[28rem] shadow-2xl"
+                        src={image}
+                        alt={`Image ${index + 7}`}
+                    />
+                ))}
             </div>
-
         </div>
     );
 }
