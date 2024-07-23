@@ -49,17 +49,13 @@ function App() {
     }, []);
 
     useEffect(() => {
-        async function fetchHomeImages(){
-            const keys = await  listObjectsInFolder("senpaiiart-photos", "home");
+        async function fetchPortfolioImages(){
+            const keys = await  listObjectsInFolder("senpaiiart-photos", "portfolio");
             const imageUrls = keys.map(key => `https://senpaiiart-photos.s3.us-west-1.amazonaws.com/${key}`)
-            setHomeImages(imageUrls);
+            setPortfolioImages(imageUrls);
         }
-        fetchHomeImages();
+        fetchPortfolioImages();
     }, []);
-
-
-
-
 
 
   return (
@@ -67,9 +63,9 @@ function App() {
         <div className="w-full overflow-hidden">
             <Navbar/>
             <Routes>
-                <Route path = "/" element={<Home/>}/>
+                <Route path = "/" element={<Home images={homeImages.slice(1,)}/>}/>
                 <Route path = "/contact" element = {<ContactPage/>} />
-                <Route path = "/portfolio" element = {<PortfolioPage/>} />
+                <Route path = "/portfolio" element = {<PortfolioPage images={portfolioImages.slice(1,)}/>} />
                 <Route path = "/contact" element = {<ContactPage/>} />
             </Routes>
 

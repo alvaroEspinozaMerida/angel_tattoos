@@ -1,11 +1,5 @@
 import "./Home.scss"
-import stockImage from "/src/assets/car-service.png"
 
-import background_1 from "/src/assets/senpaiiiart_1.jpg"
-import background_2 from "/src/assets/senpaiiiart_2.jpg"
-import background_3 from "/src/assets/senpaiiiart_3.jpg"
-import background_4 from "/src/assets/senpaiiiart_4.jpg"
-import background_5 from "/src/assets/senpaiiiart_5.jpg"
 
 import ImageGrid from "../ImageGrid/index.jsx";
 import React, {useEffect, useState} from "react";
@@ -103,7 +97,7 @@ const Home = ({images}) => {
                 </section>
 
                 <section >
-                    <ImageGrid images={homeImages.slice(1,)} details = {image_grid}/>
+                    <ImageGrid images={images} details = {image_grid}/>
                 </section>
 
                 <div className="h-72 w-full bg-no-repeat bg-center bg-cover bg-fixed bg-bg_2"></div>
@@ -125,7 +119,6 @@ const Home = ({images}) => {
                     <div className="z-10 flex flex-col gap-7 items-center justify-center">
 
                         <div className=" flex flex-col lg:flex-row gap-7 ">
-                            {/*<img src={background_2} alt={`Image2`} className=" w-auto h-auto " />*/}
                             <div className=" flex flex-col gap-7 items-center justify-center">
                                 <h1 className="paragraph">Transforming Ideas Into Art</h1>
                                 <div className="button_1">
@@ -176,10 +169,7 @@ const Home = ({images}) => {
                         <h1 className = "text-xl lg:text-3xl text-primary-text-dark bullet-point" >Carlsbad</h1>
                         <h1 className = "text-base text-secondary-text-dark " >2630 Flower Fields Way <br/>Carlsbad, CA 92010</h1>
                     </div>
-                    {/*<div className="w-96">*/}
-                    {/*    <MapComponent />*/}
-
-                    {/*</div>*/}
+                    <MapComponent/>
                 </section>
 
             </div>

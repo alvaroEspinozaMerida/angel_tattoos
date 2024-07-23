@@ -41,10 +41,10 @@ const Navbar = () => {
             {/* Mobile menu, show/hide based on menu state. */}
             <div className={isOpen ? "md:hidden" : "hidden"}>
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="/" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                    <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Services</a>
-                    <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">About</a>
-                    <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    <a href="/" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">HOME</a>
+                    <a href="/portfolio" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">PORTFOLIO</a>
+                    <a href="#" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">ABOUT ME</a>
+                    <a href="/contact" className="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium">CONTACT</a>
                 </div>
             </div>
         </nav>

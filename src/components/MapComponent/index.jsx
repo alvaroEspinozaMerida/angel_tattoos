@@ -6,7 +6,6 @@ import {
     useLoadScript,
 } from "@react-google-maps/api";
 
-import car_wash from '/src/assets/car-wash.png'
 
 const containerStyle = {
     width: '100%',
@@ -31,7 +30,7 @@ const markers = [
 
 function MapComponent() {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: "AIzaSyDvcM2coSiwLDlyOqYWPwX6_SKbMKrxS14",
+        googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
         libraries: ['marker'], // Explicitly include the marker library
     });
 
@@ -61,14 +60,13 @@ function MapComponent() {
                     center={center}
                     zoom={16}
                     onClick={() => setActiveMarker(null)}
-                    mapContainerStyle={{ width: "100%", height: "65vh" }}
+                    mapContainerStyle={{ width: "50%", height: "65vh" }}
                 >
                     {markers.map(({ id, name, position }) => (
                         <MarkerF
                             key={id}
                             position={position}
                             onClick={() => handleActiveMarker(id)}
-                            icon={car_wash}
                         >
                             {activeMarker === id ? (
                                 <InfoWindowF onCloseClick={() => setActiveMarker(null)}>

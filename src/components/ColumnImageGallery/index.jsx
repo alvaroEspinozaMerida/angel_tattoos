@@ -1,34 +1,15 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import styles from "../ImageCarousel/GameCarousel.module.scss";
-import testImg2 from "../../assets/senpaiiiart_1.jpg";
-import testImg from "../../assets/senpaiiiart_1.jpg";
-import testImg3 from "../../assets/senpaiiiart_1.jpg";
 import React from "react";
 
 
 
-function GameCarousel(props) {
+function GameCarousel({images}) {
 
-    const image_names = [
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_1.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_2.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_3.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_4.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_5.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_6.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_7.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_8.jpg",
-        "../../src/assets/senpaiiart_gallery/senpaiiiart_gl_9.jpg"
-    ];
-
-    const column1 = image_names.slice(0, 3);
-    const column2 = image_names.slice(3, 6);
-    const column3 = image_names.slice(6, 9);
-
-
-
-
+    const column1 = images.slice(0, 3);
+    const column2 = images.slice(3, 6);
+    const column3 = images.slice(6, 9);
 
 
     return (
