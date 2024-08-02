@@ -64,9 +64,9 @@ function App() {
             <Navbar/>
             <Routes>
                 <Route path = "/" element={<Home images={homeImages.slice(1,)}/>}/>
-                <Route path = "/contact" element = {<ContactPage/>} />
+                <Route path = "/contact" element = {<ContactPage s3Client={s3Client}/>} />
                 <Route path = "/portfolio" element = {<PortfolioPage images={portfolioImages.slice(1,)}/>} />
-                <Route path = "/contact" element = {<ContactPage/>} />
+                {/*<Route path = "/contact" element = {<ContactPage/>} />*/}
             </Routes>
 
         </div>

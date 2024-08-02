@@ -1,54 +1,16 @@
 import "./Home.scss"
-
-
 import ImageGrid from "../ImageGrid/index.jsx";
 import React, {useEffect, useState} from "react";
 import MapComponent from "../MapComponent/index.jsx";
 import Footer from "../Footer/index.jsx";
 
 import content from '/src/assets/home.json';// Adjust the path according to your project structure
-import {S3Client, ListObjectsV2Command} from "@aws-sdk/client-s3"
 import {Link} from "react-router-dom";
-
-
-const s3Client = new S3Client({
-    region: import.meta.env.VITE_AWS_REGION,
-    credentials: {
-        accessKeyId: import.meta.env.VITE_AWS_ACCESS_KEY_ID,
-        secretAccessKey: import.meta.env.VITE_AWS_SECRET_ACCESS_KEY,
-    },
-});
-
-async function listObjectsInFolder(bucketName, folderName){
-    const params = {
-        Bucket: bucketName,
-        Prefix: folderName,
-    };
-    try{
-        const data = await s3Client.send(new ListObjectsV2Command(params));
-        return data.Contents.map(item => item.Key);
-    }
-    catch(err){
-        console.log("Error", err);
-        return [];
-    }
-}
 
 const Home = ({images}) => {
     const [homeImages, setHomeImages] = useState([]);
     const home = content.home;
     const image_grid = content.image_grid;
-
-    useEffect(() => {
-       async function fetchHomeImages(){
-           const keys = await  listObjectsInFolder("senpaiiart-photos", "home");
-           const imageUrls = keys.map(key => `https://senpaiiart-photos.s3.us-west-1.amazonaws.com/${key}`)
-           setHomeImages(imageUrls);
-       }
-       fetchHomeImages();
-    }, []);
-
-
 
     return (
         <>
@@ -104,7 +66,7 @@ const Home = ({images}) => {
 
                 <section className="lg:p-0 lg:p-0 h-40 lg:h-64 bg-dark-primary neon-border-top-bottom flex justify-center items-center">
                     <div className="flex flex-row justify-center items-center gap-4 lg:gap-16">
-                        <img src={"/src/assets/senpaiiiart_logo.png"} alt={`Logo`} className=" w-24 lg:w-48 object-cover" />
+                        <img src={import.meta.env.VITE_LOGO_URL} alt={`Logo`} className=" w-24 lg:w-48 object-cover" />
 
                         <div className="button_1">
                             <Link to="/contact">
